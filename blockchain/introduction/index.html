@@ -1420,11 +1420,11 @@
         });
     }
     function spec_getCirculation() {
-        var url = "https://chainz.cryptoid.info/block/api.dws?q=totalcoins";
+        var url = "https://explorer.scalaris.info/ext/getmoneysupply";
         spec_ajax(url, false).then(function(data) {
             if (!isNaN(Number(data))) {
                 var circulation = spec_numberPretty(Math.round( Number(data) ));
-                document.getElementById("spec_circulation").innerHTML = '<a href="https://chainz.cryptoid.info/block/" target="_blank">Currently ' + circulation + ' SCA</a>';
+                document.getElementById("spec_circulation").innerHTML = '<a href="https://explorer.scalaris.info" target="_blank">Currently ' + circulation + ' SCA</a>';
             }
         });
     }
